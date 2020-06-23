@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GoTraveling</string>
+    <string name="title_home">Home</string>
+    <string name="title_forum">Forum</string>
+    <string name="title_personal">My</string>
+    <string name="string_hint">搜索目的地、游记等</string>
+    <string name="string_hotpost">热门帖子</string>
+    <string name="string_guidebtn">分享</string>
+    <string name="string_qnabtn">讨论</string>
+</resources>

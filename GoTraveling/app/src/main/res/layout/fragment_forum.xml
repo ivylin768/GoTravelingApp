@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:id="@+id/forum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/forum_functions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+                    <ImageButton
+                        android:id="@+id/live"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#0000"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/live"/>
+                    <ImageButton
+                        android:id="@+id/mate"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="#0000"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mate"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mate_search"
+                android:visibility="gone"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="600dp">
+                <TextView
+                    android:id="@+id/text_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="请输入您的所在地"/>
+                <Spinner
+                    android:id="@+id/my_location"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_border"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_below="@id/text_location"
+                    android:layout_alignParentLeft="true"/>
+                <TextView
+                    android:id="@+id/text_departure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@id/text_location"
+                    android:text="请输入您的目的地"/>
+                <Spinner
+                    android:id="@+id/my_departure"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_border"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_below="@id/text_location"
+                    android:layout_toRightOf="@id/my_location"/>
+                <TextView
+                    android:id="@+id/text_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_location"
+                    android:layout_marginLeft="30dp"
+                    android:text="请选择您的计划出行日期"/>
+                <Spinner
+                    android:id="@+id/my_date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_border"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_below="@id/text_date"
+                    android:layout_alignParentLeft="true"/>
+                <TextView
+                    android:id="@+id/text_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/my_departure"
+                    android:layout_toRightOf="@id/text_date"
+                    android:text="请选择您的计划旅行天数"/>
+                <Spinner
+                    android:id="@+id/my_duration"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_border"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_below="@id/text_duration"
+                    android:layout_toRightOf="@id/my_location"/>
+                <EditText
+                    android:id="@+id/more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_below="@id/my_date"
+                    android:hint="请输入您的其他旅行偏好"/>
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/more"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="20dp"
+                    android:text="提交"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/forum_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/forum_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+                    <Button
+                        android:id="@+id/guidebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_guidebtn" />
+                    <Button
+                        android:id="@+id/qnabtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_qnabtn" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/forum_imgview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/forum_imageview"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
